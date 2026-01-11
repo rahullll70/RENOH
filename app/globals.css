@@ -1,26 +1,62 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: url('/fonts/IBMPlexMono-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-plex: 'IBMPlexMono', monospace;
+  --font-mono: 'IBMPlexMono', monospace;
+  --onyx: #0b090aff;
+  --carbon-black: #161a1dff;
+  --dark-garnet: #660708ff;
+  --mahogany-red: #a4161aff;
+  --mahogany-red-2: #ba181bff;
+  --strawberry-red: #e5383bff;
+  --silver: #b1a7a6ff;
+  --dust-grey: #d3d3d3ff;
+  --white-smoke: #f5f3f4ff;
+  --white: #ffffffff;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.about-line {
+  position: relative;
+  overflow: hidden;
 }
+
+.about-line span {
+  display: block;
+  font-size: clamp(3rem, 6vw, 7rem);
+  font-weight: 700;
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.about-line .base {
+  color: #6b6b6b;
+}
+
+.about-line .fill {
+  position: absolute;
+  inset: 0;
+  color: #ffffff;
+  clip-path: inset(0 100% 0 0);
+  will-change: clip-path;
+}
+
