@@ -21,6 +21,11 @@ const plans = [
 
 const Pricing = () => (
   <section className='px-6 md:px-12 py-32 border-t border-zinc-900 bg-black'>
+    <div className='space-y-4'>
+      <h4 className='font-mono text-[12px] uppercase tracking-widest  text-zinc-500 mb-10'>
+        // Pricing / Plans
+      </h4>
+    </div>
     <div className='flex flex-col md:flex-row border-l border-zinc-900'>
       {plans.map((p, i) => (
         <motion.div

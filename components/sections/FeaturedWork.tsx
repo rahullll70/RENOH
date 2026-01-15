@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 const FeaturedWork = () => {
   return (
     <section className="py-32 border-b border-zinc-900">
-      <h2 className="text-xs font-mono text-zinc-600 uppercase mb-16 tracking-widest">
-        / Featured Work
+      <h2 className="text-[12px] font-mono text-zinc-600 uppercase mb-16 tracking-widest px-5">
+        // Featured Work
       </h2>
 
       <div className="grid grid-cols-1">
@@ -24,10 +24,10 @@ const FeaturedWork = () => {
               <div className="absolute inset-0 bg-zinc-800 group-hover:scale-105 transition-transform duration-1000" />
             </div>
 
-            <div className="flex justify-between items-center px-5">
+            {/* <div className="flex justify-between items-center px-5">
               <h3 className="text-2xl font-bold uppercase">Archive_{i}</h3>
               <ArrowUpRight />
-            </div>
+            </div> */}
           </motion.div>
         ))}
       </div>

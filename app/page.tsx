@@ -7,9 +7,8 @@ import Pricing from '@/components/sections/Pricing';
 import FAQ from '@/components/sections/FAQ';
 import CTA from '@/components/sections/CTA';
 import Footer from '@/components/sections/Footer';
-import Space from '@/components/sections/Space';
-import Space2 from '@/components/sections/Space2';
-import Space3 from '@/components/sections/Space3';
+import GhostScroll from '@/components/sections/GhostScroll';
+
 
 const Page = () => {
   return (
@@ -22,9 +21,7 @@ const Page = () => {
       <Pricing />
       <FAQ />
       <CTA />
-      <Space />
-      <Space2 />
-      <Space3 />
+      <GhostScroll />
       <Footer />
     </div>
   );
