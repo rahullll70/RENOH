@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const services = ['Web Development', 'Graphic Design', 'UI/UX Architecture'];
+const services = ['Web Development', 'Website Redesign', 'Branding',  'UI/UX Design', 'Maintenance & Support'];
 
 const Services = () => {
   return (

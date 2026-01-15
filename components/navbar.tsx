@@ -39,7 +39,7 @@ const Navbar = () => {
         className={`
           flex items-center justify-between px-6 transition-all duration-500 pointer-events-auto
           ${scrolled 
-            ? 'w-full md:w-[600px] h-14 bg-white/5 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl' 
+            ? 'w-full md:w-[800px] h-14 bg-white/5 backdrop-blur-md border border-white/10 rounded-full shadow-2xl' 
             : 'w-full h-20 bg-transparent border-transparent'}
         `}
       >
@@ -56,7 +56,7 @@ const Navbar = () => {
             <Link
               key={link.slug}
               href={`/${link.slug}`}
-              className="text-[10px] font-plex font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors relative group"
+              className="text-[10px]  font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors relative group"
             >
               {link.name}
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all duration-500 group-hover:w-full" />
@@ -87,7 +87,7 @@ const Navbar = () => {
             <motion.div 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-4 py-2 bg-white text-black text-[10px] font-plex font-bold uppercase tracking-widest rounded-full"
+              className="px-4 py-2 bg-white text-black text-[10px] font-bold uppercase tracking-widest rounded-full"
             >
               Inquire
             </motion.div>
