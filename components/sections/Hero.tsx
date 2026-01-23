@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
 
         <div className="max-w-md ml-auto md:mr-20">
-          <p className="text-xs font-mono text-zinc-500 uppercase tracking-[0.3em]">
+          <p className="text-xs font-plex text-zinc-500 uppercase tracking-[0.3em]">
             Architecting <span className="text-white italic ">high-performance</span>{" "}
             digital ecosystems.
           </p>

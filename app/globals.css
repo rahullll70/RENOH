@@ -8,9 +8,29 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'StretchPro';
+  src: url('/fonts/StretchPro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Extenda';
+  src: url('/fonts/Extenda.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 @theme {
   --font-plex: 'IBMPlexMono', monospace;
   --font-mono: 'IBMPlexMono', monospace;
+  --font-StretchPro: 'StretchPro', monospace;
+  --font-extenda: 'Extenda';
   --onyx: #0b090aff;
   --carbon-black: #161a1dff;
   --dark-garnet: #660708ff;

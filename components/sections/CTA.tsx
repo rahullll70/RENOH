@@ -1,9 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { useTime } from '@/hooks/useTime';
 
 const reveal: Variants = {
   initial: { y: 40, opacity: 0 },
@@ -15,7 +14,27 @@ const reveal: Variants = {
 };
 
 const CTA = () => {
-  const time = useTime();
+  const [mounted, setMounted] = useState(false);
+  const [delhiTime, setDelhiTime] = useState('');
+
+  useEffect(() => {
+    setMounted(true);
+    const updateTime = () => {
+      const now = new Date();
+      const timeString = new Intl.DateTimeFormat('en-IN', {
+        timeZone: 'Asia/Kolkata',
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true,
+      }).format(now);
+      
+      setDelhiTime(timeString.toUpperCase());
+    };
+
+    updateTime();
+    const timer = setInterval(updateTime, 10000); 
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section className='px-6 md:px-12 py-32 bg-white text-black border-t border-black/10'>
@@ -43,10 +62,10 @@ const CTA = () => {
             <div className='grid grid-cols-2 gap-8'>
               <div>
                 <h4 className='font-mono text-[10px] uppercase text-black/40 mb-2'>
-                  Local Time
+                  Local Time (IST)
                 </h4>
                 <p className='text-xl font-bold uppercase tracking-tighter'>
-                  {time}
+                  {mounted ? delhiTime : '--:-- --'}
                 </p>
               </div>
               <div>
@@ -56,7 +75,7 @@ const CTA = () => {
                 <p className='text-xl font-bold uppercase tracking-tighter leading-none'>
                   &lt; 24 Hours
                 </p>
-                {/* Added Monday to Saturday below */}
+                
                 <p className='font-mono text-[9px] uppercase tracking-wider text-black/40 mt-1'>
                   Monday to Saturday
                 </p>
@@ -71,7 +90,7 @@ const CTA = () => {
             variants={reveal}
             className='flex flex-col items-start lg:items-end'
           >
-            <p className='font-mono text-[10px] uppercase tracking-[0.5em] mb-8 text-black/40'>
+            <p className='font-plex text-[10px] uppercase tracking-[0.5em] mb-8 text-black/40'>
               Ready to evolve?
             </p>
             <motion.a
@@ -79,7 +98,7 @@ const CTA = () => {
               whileHover={{ scale: 1.05 }}
               className='group relative inline-flex items-center justify-center bg-black text-white px-10 py-6 rounded-full overflow-hidden'
             >
-              <span className='relative z-10 text-xl font-bold uppercase tracking-widest group-hover:pr-10 transition-all duration-500'>
+              <span className='relative z-10 text-xl font-StretchPro uppercase tracking-widest group-hover:pr-10 transition-all duration-500'>
                 Start Project
               </span>
               <ArrowUpRight className='absolute right-10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-10' />

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center border-t border-zinc-900 text-zinc-700 font-mono text-[12px] uppercase'>
+    <footer className='px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-center border-t border-zinc-900 text-zinc-700 font-plex text-[12px] uppercase'>
       <p>© 2026 Renoh Studio</p>
       
       <div className='flex space-x-10'>
@@ -18,7 +18,6 @@ const Footer = () => {
             className='hover:text-white transition-all duration-300 relative group pb-1'
           >
             {link.name}
-            {/* The animated underline */}
             <span className="absolute bottom-0 left-0 w-0 h-px bg-white transition-all duration-500 group-hover:w-full" />
           </Link>
         ))}

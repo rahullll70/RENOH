@@ -11,7 +11,7 @@ const textReveal: Variants = {
     y: 0, 
     transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } 
   },
-  viewport: { once: false, margin: "-25%" }
+  // viewport: { once: false, margin: "-25%" }
 };
 
 const GhostScroll = () => {
@@ -68,7 +68,7 @@ const GhostScroll = () => {
             className="flex flex-col items-center gap-4"
           >
             <p className="text-white text-xl font-light">Now click 'Start Project'.</p>
-            <div className="w-1 h-12 bg-gradient-to-b from-white to-transparent animate-bounce mt-4" />
+            <div className="w-[1px] h-12 bg-gradient-to-b from-white to-transparent animate-bounce mt-4" />
             <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ const GhostScroll = () => {
               whileTap={{ scale: 0.95 }}
               className="relative inline-flex items-center gap-6 bg-white text-black px-14 py-7 rounded-full transition-all duration-500 hover:bg-zinc-200"
             >
-              <span className="text-2xl font-bold uppercase tracking-widest relative z-10">
+              <span className="text-2xl font-StretchPro uppercase tracking-wide relative z-10">
                 Start Project
               </span>
               <ArrowUpRight className="w-8 h-8 relative z-10 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
