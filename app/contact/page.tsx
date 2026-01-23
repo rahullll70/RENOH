@@ -114,7 +114,7 @@ const ContactPage = () => {
               <motion.button
                 whileHover={{ backgroundColor: '#fff', color: '#000' }}
                 whileTap={{ scale: 0.98 }}
-                className='bg-transparent border border-white text-white w-full py-6 rounded-full font-mono text-[10px] uppercase tracking-[0.3em] flex items-center justify-center gap-2 group transition-colors'
+                className='bg-transparent cursor-pointer border border-white text-white w-full py-6 rounded-full font-mono text-[10px] uppercase tracking-[0.3em] flex items-center justify-center gap-2 group transition-colors'
               >
                 Send Inquiry
                 <ArrowUpRight
